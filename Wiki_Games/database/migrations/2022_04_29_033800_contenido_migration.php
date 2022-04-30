@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Contenido', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('contenido', function (Blueprint $table) {
+            $table->increments('id');
             $table->String('nombre');
             $table->String('img');
             $table->timestamps();

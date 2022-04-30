@@ -13,13 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Info_Juegos', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('id_contenido')->unsigned('');
-            $table->integer('id_juego')->unsigned('');
+        Schema::create('info_juegos', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('contenido');
+            $table->integer('id_contenido')->unsigned();
+            $table->integer('id_juego')->unsigned();
             $table->timestamps();
             $table->foreign('id_contenido')->references('id')->on('contenido');
-            $table->foreing('id_juego')->references('id')->on('juego');
+            $table->foreign('id_juego')->references('id')->on('lista_de_juegos');
 
         });
     }

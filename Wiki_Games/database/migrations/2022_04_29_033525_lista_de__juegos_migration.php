@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Lista_de_Juegos', function (Blueprint $table) {
-            $table->Increments('id');
-            $table->String('nombre');
-            $table->String('genero');
-            $table->String('desarollador');
-            $table->String('img');
+        Schema::create('lista_de_juegos', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nombre');
+            $table->string('genero');
+            $table->string('desarrollador');
+            $table->string('img');
             $table->timestamps();
         });
     }
