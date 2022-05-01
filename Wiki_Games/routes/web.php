@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/Inicio', function () {
+    echo("Hola Estas en Wiki Games");
+});
