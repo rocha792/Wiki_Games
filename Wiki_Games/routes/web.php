@@ -14,8 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('fronts.index');
 });
 Route::get('/Inicio', function () {
     echo("Hola Estas en Wiki Games");
+    
+});
+Route::get('/Contenido', function () {
+    $color='#fA0011';
+    $usuario="Dorado Aragon";
+    $num=rand(1,50);
+    return view('Lista:Juegos')
+            ->with('colorset', $color)
+            ->with('ususario', $ususario)
+            ->with('numero', $num);
+    
 });
