@@ -24,7 +24,7 @@ Route::get('/Contenido', function () {
     $color='#fA0011';
     $usuario="Dorado Aragon";
     $num=rand(1,50);
-    return view('Lista:Juegos')
+    return view('fronts.lista_de_juegos')
             ->with('colorset', $color)
             ->with('ususario', $ususario)
             ->with('numero', $num);
