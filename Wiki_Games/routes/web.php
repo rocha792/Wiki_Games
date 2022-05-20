@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('fronts.index');
 });
+Route::get('admin', function () {
+    return view('Dash.dashboard.index');
+});
 Route::get('/Inicio', function () {
     echo("Hola Estas en Wiki Games");
     
@@ -30,3 +33,6 @@ Route::get('/Contenido', function () {
             ->with('numero', $num);
     
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
