@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>Wiki Games</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="s/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{asset('/Front/dash/css/styles.css')}}" rel="stylesheet" />
     </head>
@@ -35,7 +35,7 @@
 
 
         <!-- Page content-->
-        
+        @include('dashboard.')
 
 
         <!-- Footer-->
@@ -45,6 +45,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="{{asset('/Front/dash/js/scripts.js')}}"></script>
+        <script src="{{('/Front/dash/js/scripts.js')}}"></script>
     </body>
 </html>
