@@ -30,12 +30,12 @@
 
 
         <!-- Page header with logo and tagline-->
-        @yield('contenido')
+        
         @include("fronts.layouts.header")
 
 
         <!-- Page content-->
-        @include('dashboard.')
+        @yield('contenido')
 
 
         <!-- Footer-->
