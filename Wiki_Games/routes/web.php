@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\dashboard\JuegosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {return view('fronts.index');});
 Route::get('/admin', function () {return view('dashboard.index');});
 Route::get('/admin/categorias', function () { return view('dashboard.categorias');});
+Route::get('/admin/lista_de_juegos', [JuegosController::class, 'miFuncion']);
 
 //Route::get('/admin', function () { return View('das');  });
 Route::get('admin/lista_de_juegos', function () { return view('dashboard.lista_de_juegos');});
