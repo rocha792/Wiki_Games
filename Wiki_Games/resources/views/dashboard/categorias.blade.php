@@ -31,7 +31,7 @@
               <div class="form group">
                 <label for="">Categoria</label>
                 <select name="" id="" class="from-control">
-                  @foreach ($categorias as $cate)
+                  @foreach ($Categorias as $cate)
                       <option> {{ $cate->categorias }} </option>
                   @endforeach
                 </select>
