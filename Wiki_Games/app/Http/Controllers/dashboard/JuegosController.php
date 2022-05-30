@@ -10,6 +10,6 @@ class JuegosController extends Controller
     public function miFuncion(){
         $categorias =\DB::table('categorias'->get());
         dd($dfgdf);
-        return view('dashboard.categorias');
+        return view('dashboard.categorias')->with('categorias', $categorias);
     }
 }

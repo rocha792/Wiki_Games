@@ -8,6 +8,9 @@
         </div>
     </div>
     <!--MODAL AGREGAR-->
+
+    <form action="">
+
     <div class="modal" tabindex="-1" role="dialog" id="modalAdd">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -27,7 +30,11 @@
                     <!--Categoria-->
               <div class="form group">
                 <label for="">Categoria</label>
-                <input type="text" class="from-control" placeholder="Categoria">
+                <select name="" id="" class="from-control">
+                  @foreach ($categorias as $cate)
+                      <option> {{ $cate->categorias }} </option>
+                  @endforeach
+                </select>
             </div>
                     <!--Imagen-->
             <div class="form group">
@@ -38,8 +45,9 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-primary"> <i class="fa fa-save"></i> Guardar Juegos</button>
+              <button type="submit" class="btn btn-primary"> <i class="fa fa-save"></i> Guardar Juegos</button>
             </div>
+    </form>
           </div>
         </div>
       </div>
