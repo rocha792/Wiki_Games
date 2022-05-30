@@ -8,8 +8,7 @@ use Illuminate\Http\Request;
 class JuegosController extends Controller
 {
     public function miFuncion(){
-        $categorias =\DB::table('categorias'->get());
-        dd($dfgdf);
+        $categorias =\DB::table('categorias')->get();
         return view('dashboard.categorias')->with('categorias', $categorias);
     }
 }

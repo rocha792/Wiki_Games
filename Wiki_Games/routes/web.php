@@ -16,7 +16,7 @@ use App\Http\Controllers\dashboard\JuegosController;
 
 Route::get('/', function () {return view('fronts.index');});
 Route::get('/admin', function () {return view('dashboard.index');});
-Route::get('/admin/categorias', function () { return view('dashboard.categorias');});
+Route::get('/admin/categorias', [JuegosController::class, 'miFuncion']);
 Route::get('/admin/lista_de_juegos', [JuegosController::class, 'miFuncion']);
 
 //Route::get('/admin', function () { return View('das');  });
