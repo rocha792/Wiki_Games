@@ -18,6 +18,7 @@ Route::get('/', function () {return view('fronts.index');});
 Route::get('/admin', function () {return view('dashboard.index');});
 Route::get('/admin/categorias', [JuegosController::class, 'miFuncion']);
 Route::get('/admin/lista_de_juegos', [JuegosController::class, 'miFuncion']);
+Route::post('admin/categorias', [categorias::class, 'insertar']);
 
 //Route::get('/admin', function () { return View('das');  });
 Route::get('admin/lista_de_juegos', function () { return view('dashboard.lista_de_juegos');});

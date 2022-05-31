@@ -17,34 +17,48 @@
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="">
-      <div class="modal-body">
-         <!-- Caracteristicas del juego --> 
-                    <!--Nombre del juego-->
-                    <div class="form group">
-                      <label for="">Nombre del Juego</label>
-                      <input type="text" class="from-control" placeholder="Nombre Juego">
-                  </div>
-                        <!--Categoria-->
-                  <div class="form group">
-                    <label for="">Categoria</label>
-                    <select name="" id="" class="from-control">
-                      @foreach ($categorias as $cate)
-                          <option> {{ $cate->categoria }} </option>
-                      @endforeach
-                    </select>
-                </div>
-                        <!--Imagen-->
-                <div class="form group">
-                    <label for="">Imagen</label>
-                    <input type="file" class="from-control">
-                </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
-      </div>
-    </form>
+
+      <!--Error-->
+      @if ($message = Session::get('ErrorInsert'))
+        <div class="row alert alert-danger alert-dismissable fade show">
+          <h5>Error: {{$message}}</h5>
+          <ul>
+            @foreach($errors-all() as $error)
+              <li>{{$error}}</li>
+            @endforeach
+          </ul>
+        </div>
+      @endif
+
+      <!-- Caracteristicas del juego --> 
+      <form action="/admin/Categorias" method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="modal-body">
+          <!--Nombre del juego-->
+          <div class="form group">
+            <label for="">Nombre del Juego</label>
+            <input type="text" class="from-control" placeholder="Nombre Juego" name="Nombre">
+          </div>
+          <!--Imagen-->
+          <div class="form group">
+            <label for="">Imagen</label>
+            <input type="file" class="from-control" name="img">
+          </div>
+          <!--Categoria-->
+          <div class="form group">
+            <label for="">Categoria</label>
+            <select name="" id="" class="from-control" name="Categoria">
+              @foreach ($categorias as $cate)
+                <option> "{{ $cate->id }}" {{ $cate->categoria }} </option>
+              @endforeach
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary"> <i><fa class="fa fa-save"></fa></i> Guardar</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
