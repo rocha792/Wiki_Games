@@ -23,7 +23,7 @@
         <div class="row alert alert-danger alert-dismissable fade show">
           <h5>Error: {{$message}}</h5>
           <ul>
-            @foreach($errors-all() as $error)
+            @foreach($errors->all() as $error)
               <li>{{$error}}</li>
             @endforeach
           </ul>
@@ -31,13 +31,13 @@
       @endif
 
       <!-- Caracteristicas del juego --> 
-      <form action="/admin/Categorias" method="POST" enctype="multipart/form-data">
+      <form action="/admin/categorias" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="modal-body">
           <!--Nombre del juego-->
           <div class="form group">
             <label for="">Nombre del Juego</label>
-            <input type="text" class="from-control" placeholder="Nombre Juego" name="Nombre">
+            <input type="text" class="from-control col-12" placeholder="Nombre Juego" name="nombre">
           </div>
           <!--Imagen-->
           <div class="form group">
@@ -47,9 +47,9 @@
           <!--Categoria-->
           <div class="form group">
             <label for="">Categoria</label>
-            <select name="" id="" class="from-control" name="Categoria">
+            <select  id="" class="from-control" name="categorias">
               @foreach ($categorias as $cate)
-                <option> "{{ $cate->id }}" {{ $cate->categoria }} </option>
+                <option value="{{ $cate->id }}">  {{ $cate->categoria }} </option>
               @endforeach
             </select>
           </div>

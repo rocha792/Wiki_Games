@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dashboard\JuegosController;
-
+use  App\Http\Controllers\dashboard\CategoriasController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +16,9 @@ use App\Http\Controllers\dashboard\JuegosController;
 
 Route::get('/', function () {return view('fronts.index');});
 Route::get('/admin', function () {return view('dashboard.index');});
-Route::get('/admin/categorias', [JuegosController::class, 'miFuncion']);
+Route::get('/admin/categorias', [CategoriasController::class, 'index']);
 Route::get('/admin/lista_de_juegos', [JuegosController::class, 'miFuncion']);
-Route::post('admin/categorias', [categorias::class, 'insertar']);
+Route::post('admin/categorias', [CategoriasController::class, 'insertar']);
 
 //Route::get('/admin', function () { return View('das');  });
 Route::get('admin/lista_de_juegos', function () { return view('dashboard.lista_de_juegos');});
