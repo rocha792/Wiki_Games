@@ -5,6 +5,8 @@ namespace App\Http\Controllers\dashboard;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Validator;
+use App\Models\Wiki;
+
 class CategoriasController extends Controller
 {
     public function index(){
@@ -25,7 +27,7 @@ class CategoriasController extends Controller
             ->withErrors($validacion);
             //echo "Favor de llenar todos los campos";
         }else{
-            //echo "Funciona correctamente";
+            echo "Funciona correctamente";
         }
     }
 }

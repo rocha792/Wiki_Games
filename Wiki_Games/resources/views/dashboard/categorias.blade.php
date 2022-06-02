@@ -37,17 +37,17 @@
           <!--Nombre del juego-->
           <div class="form group">
             <label for="">Nombre del Juego</label>
-            <input type="text" class="from-control col-12" placeholder="Nombre Juego" name="nombre">
+            <input type="text" class="from-control col-12" placeholder="Nombre Juego" name="nombre" value="{{ old('name') }}">
           </div>
           <!--Imagen-->
           <div class="form group">
             <label for="">Imagen</label>
-            <input type="file" class="from-control" name="img">
+            <input type="file" class="from-control col-12" name="img" value="{{ old('img') }}>
           </div>
           <!--Categoria-->
           <div class="form group">
             <label for="">Categoria</label>
-            <select  id="" class="from-control" name="categorias">
+            <select  id="" class="from-control col-12" name="categorias" value="{{ old('categorias') }}>
               @foreach ($categorias as $cate)
                 <option value="{{ $cate->id }}">  {{ $cate->categoria }} </option>
               @endforeach
