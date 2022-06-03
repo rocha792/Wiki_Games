@@ -18,6 +18,32 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
+      <div class="row">
+        <!--SUCCESS-->
+        @if ($message = Session::get('Listo'))
+          <div class="row alert aletr-success fade show">
+            <h5 class="clo-12"><i class="fa fa-check"></i> Alerta</h5>
+            <br>
+            <br>
+            <p>{{ $message }}</p>
+            </div>
+          </div>
+      @endif
+
+      <!-- Imprimir los productos -->
+      <div class="row">
+        @foreach($WikiG as $Wiki)
+          <div class="card col-3">
+            <img src="{{ asset('/Wiki/'. $WikiG->img) }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ $WikiG->nombre }}</h5>
+              <p class="card-text">{{ $WikiG->categoria }}</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        @endforeach
+      </div>
+
       <!--Error-->
       @if ($message = Session::get('ErrorInsert'))
         <div class="row alert alert-danger alert-dismissable fade show">
