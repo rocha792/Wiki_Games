@@ -32,12 +32,12 @@
 
       <!-- Imprimir los productos -->
       <div class="row">
-        @foreach($WikiG as $Wiki)
+        @foreach($WikiG as $categorias)
           <div class="card col-3">
-            <img src="{{ asset('/Wiki/'. $WikiG->img) }}" class="card-img-top" alt="...">
+            <img src="{{ asset('/Wiki/'. $Wiki->img) }}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">{{ $WikiG->nombre }}</h5>
-              <p class="card-text">{{ $WikiG->categoria }}</p>
+              <h5 class="card-title">{{ $Wiki->nombre }}</h5>
+              <p class="card-text">{{ $Wiki->categoria }}</p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>

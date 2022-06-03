@@ -20,7 +20,7 @@ class Lista_de_JuegosSeeder extends Seeder
             'nombre'=>'Genshin Impact',
             'genero'=>'Accion',
             'desarrollador'=>'HOYOVERSO',
-            'img'=>'defailt.jpg'
+            'img'=>'defailt.jpg',
         ]);
         DB::table('Lista_de_Juegos')->insert([
             'nombre'=>'Darck Souls',
@@ -32,6 +32,24 @@ class Lista_de_JuegosSeeder extends Seeder
             'nombre'=>'Super Mario World',
             'genero'=>'Aventura',
             'desarrollador'=>'Nintendo',
+            'img'=>'defailt.jpg'
+        ]);
+        DB::table('Lista_de_Juegos')->insert([
+            'nombre'=>'Super Smash Bros Ultimate',
+            'genero'=>'Aventura',
+            'desarrollador'=>'Nintendo',
+            'img'=>'defailt.jpg'
+        ]);
+        DB::table('Lista_de_Juegos')->insert([
+            'nombre'=>'Free Fire',
+            'genero'=>'Battlel Royal ',
+            'desarrollador'=>'Ganera',
+            'img'=>'defailt.jpg'
+        ]);
+        DB::table('Lista_de_Juegos')->insert([
+            'nombre'=>'Call of Duty',
+            'genero'=>'Battlel Royal',
+            'desarrollador'=>'Tencen Games',
             'img'=>'defailt.jpg'
         ]);
     }
