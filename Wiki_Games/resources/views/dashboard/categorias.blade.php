@@ -8,7 +8,18 @@
         </div>
     </div>
     <!--MODAL AGREGAR-->
-
+    <div class="row">
+      @foreach($categorias as $Wiki)
+        <div class="card col-3">
+          <img src="{{ asset('/Wiki/'. $Wiki->img) }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ $Wiki->categoria }}</h5>
+            <p class="card-text">{{ $Wiki->categoria }}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      @endforeach
+    </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -31,18 +42,7 @@
       @endif
 
       <!-- Imprimir los productos -->
-      <div class="row">
-        @foreach($WikiG as $categorias)
-          <div class="card col-3">
-            <img src="{{ asset('/Wiki/'. $Wiki->img) }}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{ $Wiki->nombre }}</h5>
-              <p class="card-text">{{ $Wiki->categoria }}</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        @endforeach
-      </div>
+     
 
       <!--Error-->
       @if ($message = Session::get('ErrorInsert'))

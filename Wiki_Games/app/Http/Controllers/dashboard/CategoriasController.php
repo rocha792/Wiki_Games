@@ -12,9 +12,9 @@ class CategoriasController extends Controller
 {
     public function index(){
         $categorias =\DB::table('categorias')->get();
-        $lista_de_juegos =\DB::table('Wiki',)->orderBy('id','DESC')->get();
+        $lista =\DB::table('lista_de_juegos',)->orderBy('id','DESC')->get();
         return view('dashboard.categorias')
-            ->with('Wiki', $lista_de_juegos)
+            ->with('lista_de_juegos', $lista)
             ->with('categorias', $categorias);
     }
     public function insertar( Request $req ){

@@ -18,27 +18,33 @@ class CategoriasSeeder extends Seeder
     {
         DB::table('Categorias')->insert([
             'categoria'=>'Accion',
-            'img'=>'default.jpg'
+            'img'=>'default.jpg',
+            'slug'=>'hola'
         ]);
         DB::table('Categorias')->insert([
             'categoria'=>'Arcade',
-            'img'=>'default.jpg'
+            'img'=>'default.jpg',
+            'slug'=>'hola'
         ]);
         DB::table('Categorias')->insert([
             'categoria'=>'Deportivo',
-            'img'=>'default.jpg'
+            'img'=>'default.jpg',
+            'slug'=>'hola'
         ]);
         DB::table('Categorias')->insert([
             'categoria'=>'Estrategia',
-            'img'=>'default.jpg'
+            'img'=>'default.jpg',
+            'slug'=>'hola'
         ]);
         DB::table('Categorias')->insert([
             'categoria'=>'Terror',
-            'img'=>'default.jpg'
+            'img'=>'default.jpg',
+            'slug'=>'hola'
         ]);
         DB::table('Categorias')->insert([
             'categoria'=>'Suspenso',
-            'img'=>'default.jpg'
+            'img'=>'default.jpg',
+            'slug'=>'hola'
         ]);
     }
 }

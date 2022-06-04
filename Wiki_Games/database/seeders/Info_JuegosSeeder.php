@@ -16,10 +16,10 @@ class Info_JuegosSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('Info_Juegos')->insert([
+        DB::table('info_juegos')->insert([
             'contenido'=>'contenido',
-            'id_contenido'=>'id contenido',
-            'id_juego'=>'id juego'
+            'id_contenido'=>1,
+            'id_juego'=>1
         ]);
     }
 }

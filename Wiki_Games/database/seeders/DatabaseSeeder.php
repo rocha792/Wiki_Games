@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UsersSeeder::class);
         $this->call(CategoriasSeeder::class);
         $this->call(Lista_de_JuegosSeeder::class);
+        $this->call(ContenidoSeeder::class);
         $this->call(Info_JuegosSeeder::Class);
     }
 }
