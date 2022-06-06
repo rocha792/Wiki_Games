@@ -14,6 +14,10 @@ use  App\Http\Controllers\dashboard\CategoriasController;
 |
 */
 
+Route::get('/', function () {
+    return view('front.index');
+});
+
 Route::get('/', function () {return view('fronts.index');});
 Route::get('/admin', function () {return view('dashboard.index');});
 Route::get('/admin/categorias', [CategoriasController::class, 'index']);

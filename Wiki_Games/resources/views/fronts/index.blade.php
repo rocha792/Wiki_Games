@@ -121,7 +121,7 @@
                     <!-- Side widget-->
                     <div class="card mb-4">
                         <div class="card-header">Wiki Games</div>
-                        <div class="card-body">La paguina web adecuada para saber más sobre tus juegos competitivos</div>
+                        <div class="card-body">La paguina web adecuada para saber más sobre tus juegos favoritos</div>
                     </div>
                 </div>
             </div>
