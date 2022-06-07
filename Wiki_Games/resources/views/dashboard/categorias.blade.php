@@ -7,11 +7,45 @@
                 class="fas fa-upload fa-sm text-white-90">Agregar Juegos</i></a>
         </div>
     </div>
+    <!-- SUCCESO -->
+    @if($message = Session::get('Listo'))
+      <div class="row alert alert-success fade show">
+        <h5 class="col-12"><i class="fa fa-check"></i></h5>
+        <br>
+        <br>
+        <p>{{ $mensaje }}</p>
+      </div>
+      @endif
+      <!-- IMPRIMIR JUEGOS -->
+      <div class="row col-12">
+        @foreach($categorias as $Wiki)
+        <div class="card col-2">
+          <img class="card-img-top" src="{{ asset('/img'.$categorias->img)}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{$categorias->$wiki}}</h5>
+            <p class="card-text">{{$categorias->$nombre}}</p>
+            <a href="#" class="btn btn-primay"> Go somewhere</a>
+          </div>
+        </div>
+        @endforeach
+      </div>
+      <!--Error-->
+      @if ($message = Session::get('ErrorInsert'))
+        <div class="row alert alert-danger alert-dismissable fade show">
+          <h5>Error: {{$message}}</h5>
+          <ul>
+            @foreach($errors->all() as $error)
+              <li>{{$error}}</li>
+            @endforeach
+          </ul>
+        </div>
+      @endif
+
     <!--MODAL AGREGAR-->
     <div class="row">
       @foreach($categorias as $Wiki)
         <div class="card col-3">
-          <img src="{{ asset('/Wiki/'. $Wiki->img) }}" class="card-img-top" alt="...">
+          <img src="{{ asset('/img/'. $Wiki->img) }}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ $Wiki->categoria }}</h5>
             <p class="card-text">{{ $Wiki->categoria }}</p>
@@ -30,32 +64,6 @@
       </div>
 
       <div class="row">
-        <!--SUCCESS-->
-        @if ($message = Session::get('Listo'))
-          <div class="row alert aletr-success fade show">
-            <h5 class="clo-12"><i class="fa fa-check"></i> Alerta</h5>
-            <br>
-            <br>
-            <p>{{ $message }}</p>
-            </div>
-          </div>
-      @endif
-
-      <!-- Imprimir los productos -->
-     
-
-      <!--Error-->
-      @if ($message = Session::get('ErrorInsert'))
-        <div class="row alert alert-danger alert-dismissable fade show">
-          <h5>Error: {{$message}}</h5>
-          <ul>
-            @foreach($errors->all() as $error)
-              <li>{{$error}}</li>
-            @endforeach
-          </ul>
-        </div>
-      @endif
-
       <!-- Caracteristicas del juego --> 
       <form action="/admin/categorias" method="POST" enctype="multipart/form-data">
         @csrf

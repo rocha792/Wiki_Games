@@ -10,14 +10,81 @@ use Hash;
 
 class CategoriasController extends Controller
 {
+//<!------------ INDEX ------------>
     public function index(){
         $categorias =\DB::table('categorias')->get();
         $lista =\DB::table('lista_de_juegos',)->orderBy('id','DESC')->get();
+        
         return view('dashboard.categorias')
             ->with('lista_de_juegos', $lista)
             ->with('categorias', $categorias);
     }
-    public function insertar( Request $req ){
+//<!------------ STORE ------------>
+    public function store (Request $req){
+        $validacion = Validator::make ( $req->all(),[
+            'name' => 'required|min:4|max:100',
+            'img' => 'required|mines:jpg,png,jpeg,webp|max:2000'
+        ] );
+        if ($validacion->files()){
+            return back()
+                ->withInput()
+                ->with('Error Insert','Favor de llenar todos los campos')
+                ->withErrors($validacion);
+        }else{
+            $img = $req->file('img');
+            $nombre = time().'.'.$img->getClientOriginalExtension();
+            categorias::create([
+                'categoria' => $req->nombre,
+                'img' => $nombre
+            ]);
+            return back()->with('Lista', 'Se ha insertado corectamente');
+        }
+    }
+//<!------------ DESTROY ------------>
+    public function destroy ($id){
+        $categorias = categorias::find($id);
+        if ($categorias->img != 'default.jpg'){
+            if(File::exists(public_path('categorias/'.$categorias->img))){
+                unlink(public_path('categorias/'.$categorias->img));
+            }
+        }
+        $categorias->delete();
+        
+        return back()->witch('Listo','El reguistro se elimino');
+    }
+//<!------------ UPDATE ------------>    
+    public function update(Request $req){
+        $validacion = Validator::make($req->all(),[
+            'nombre' => 'required|min:4|max:100'    
+        ]);
+    if ($validacion->fails()){
+        return back()
+            ->withInput()
+            ->with('ErrorInsert', 'Favor de llenar todos los campos')
+            ->withErrors($validacion);
+        }else{
+            $validacion = Validator::make($req->all().[
+                'img' => 'required|mimes:jpg,png,jpeg,webp|max:2000'
+            ]);
+            $registro = categorias::fild($req->id);
+            if($validacion->file()){
+                $registro->categorias=$req->nombre;
+                $registro->save();
+            }else{
+                if($validacion->img != 'default.jpg'){
+                    if (File::exists(public_path('categorias/'.$registro->img))){
+                        unlink(public_path('categorias/'.$registro->img));
+                    }
+                    $img = $req->file('img');
+                    $nombre = time().'.'. $img->getClientOriginalExtension();
+
+                }
+            }
+        }
+    
+    }
+//<!------------ INSERTAR ------------>    
+    public function insertar(Request $req){
         $validacion = Validator::make( $req->all(),[
             'nombre'=>'required|min:5|max:20',
             'categorias'=>'required',
