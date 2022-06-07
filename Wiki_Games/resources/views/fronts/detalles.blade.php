@@ -20,52 +20,47 @@
                         <div class="col-lg-6">
                             <!-- Dark Souls -->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="./img/Dark Souls.jpg" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top" src="./img/personajes.jpg" alt="..." /></a>
                                 <div class="card-body">
-                                    <div class="small text-muted">Accion, Aventura</div>
-                                    <h2 class="card-title h4">Dark Souls</h2>
-                                    <p class="card-text">‘Dark Souls: Prepare to Die Edition’, el juego de PC, es exactamente igual 
-                                        al ‘Dark Souls’ de consola, pero con unos cuantos contenidos extra: dos nuevos jefes finales, 
-                                        un nuevo capítulo, nuevas zonas explorables, nuevos personajes no controlables y nuevos ítems (armaduras, etc.).</p>
-                                    <a class="btn btn-primary" href="#!">Leer más →</a>
+                                    <!--<div class="small text-muted">Accion, Aventura</div>-->
+                                    <h2 class="card-title h4">Personajes</h2>
+                                    <p class="card-text">El juego consta de una gran cantidad de personajes muy llamativos y carismaticos, los cuales son
+                                        poseedores de poderedes elementales llamados visiones los cuales le otorga un poder elemental con los cuales desempeñan
+                                        diferentes roles a la hora de jugar ...
+                                    </p>
                                 </div>
                             </div>
                             <!-- Super Smash Bros Ultimate -->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="./img/Call of Duty.jpg" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top" src="./img/visiones.jpg" alt="..." /></a>
                                 <div class="card-body">
-                                    <div class="small text-muted">Battle Royal</div>
-                                    <h2 class="card-title h4">Call of Duty</h2>
-                                    <p class="card-text">Call of Duty: Mobile es un videojuego de disparos en primera persona desarrollado 
-                                        por Activision y TiMi Studios de Tencent Games para la plataforma de Android e IOS. Fue lanzado el 
-                                        1 de octubre de 2019. En su primer mes el juego tuvo más de 148 millones de descargas y generó casi 
-                                        US$ 54 millones en ingresos.​​</p>
-                                    <a class="btn btn-primary" href="#!">Leer más →</a>
+                                    <!--<div class="small text-muted">Battle Royal</div>-->
+                                    <h2 class="card-title h4">Visiones</h2>
+                                    <p class="card-text">Las Visiones son dones otorgados a los humanos a quienes los dioses reconocen. Otorgan al portador 
+                                        habilidades elementales basadas en el elemento de su Visión dada. Se dice que aquellos con éstas tienen la posibilidad 
+                                        de ascender a Celestia y alcanzar la divinidad ellos mismos.​​</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <!-- Call of Duty -->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="./img/Super Smash Bros Ultimate.jpg" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top" src="./img/mapa.jpg" alt="..." /></a>
                                 <div class="card-body">
-                                    <div class="small text-muted">Pelea</div>
-                                    <h2 class="card-title h4">Super Smash Bros Ultimate</h2>
-                                    <p class="card-text">Super Smash Bros. Ultimate es un videojuego de lucha desarrollado por Sora Ltd. 
-                                        y Bandai Namco Entertainment y distribuido por Nintendo para la consola Nintendo Switch. Fue lanzado 
-                                        a nivel mundial el 7 de diciembre de 2018 y se trata del quinto título de la serie Super Smash Bros.</p>
-                                    <a class="btn btn-primary" href="#!">Leer más →</a>
+                                    <!--<div class="small text-muted">Pelea</div>-->
+                                    <!--el sabe cosas we-->
+                                    <h2 class="card-title h4">Mapa</h2>
+                                    <p class="card-text">Teyvat es el continente donde el Viajero comienza su aventura en Genshin Impact.</p>
                                 </div>
                             </div>
                             <!-- Free Fire -->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="./img/Free Fire.jpg" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top" src="./img/jefes.jpg" alt="..." /></a>
                                 <div class="card-body">
-                                    <div class="small text-muted">Battle Royal</div>
-                                    <h2 class="card-title h4">Free Fire</h2>
-                                    <p class="card-text">Garena Free Fire es un videojuego battle royale, desarrollado por 111dots studio​ y 
-                                        publicado por Garena para Android e IOS.​​Se convirtió en el juego móvil más descargado a nivel global en 2019.​ </p>
-                                    <a class="btn btn-primary" href="#!">Leer más →</a>
+                                    <!--<div class="small text-muted">Battle Royal</div>-->
+                                    <h2 class="card-title h4">Jefes</h2>
+                                    <p class="card-text">...</p>
+               
                                 </div>
                             </div>
                         </div>

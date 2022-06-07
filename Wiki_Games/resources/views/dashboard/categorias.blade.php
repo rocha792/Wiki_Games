@@ -13,17 +13,17 @@
         <h5 class="col-12"><i class="fa fa-check"></i></h5>
         <br>
         <br>
-        <p>{{ $mensaje }}</p>
+        <p>{{ $meesage }}</p>
       </div>
       @endif
       <!-- IMPRIMIR JUEGOS -->
       <div class="row col-12">
         @foreach($categorias as $Wiki)
         <div class="card col-2">
-          <img class="card-img-top" src="{{ asset('/img'.$categorias->img)}}" alt="Card image cap">
+          <img class="card-img-top" src="{{ asset('/img'.$Wiki->categoria)}}" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">{{$categorias->$wiki}}</h5>
-            <p class="card-text">{{$categorias->$nombre}}</p>
+            <h5 class="card-title">{{$Wiki->categoria}}</h5>
+            <p class="card-text">{{$Wiki->categoria}}</p>
             <a href="#" class="btn btn-primay"> Go somewhere</a>
           </div>
         </div>
